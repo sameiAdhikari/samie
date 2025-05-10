@@ -6,7 +6,7 @@ import Heading from "../../ui/Heading";
 import ButtonGroup from "../../ui/ButtonGroup";
 import Button from "../../ui/Button";
 import ButtonText from "../../ui/ButtonText";
-import CheckBox from "../../ui/CheckBox";
+import Checkbox from "../../ui/Checkbox";
 import { formatCurrency } from "../../utils/helpers";
 
 import { useMoveBack } from "../../hooks/useMoveBack";
@@ -64,7 +64,7 @@ function CheckinBooking() {
       <BookingDataBox booking={booking} />
 
       <Box>
-        <CheckBox
+        <Checkbox
           checked={addBreakfast}
           onChange={() => {
             setAddBreakfast(!addBreakfast);
@@ -73,11 +73,11 @@ function CheckinBooking() {
           id="breakfast"
         >
           want to add breakfast for {settings?.breakfastPrice}
-        </CheckBox>
+        </Checkbox>
       </Box>
 
       <Box>
-        <CheckBox
+        <Checkbox
           // checked={booking?.isPaid === true || confirmedPain}
           checked={confirmedPain}
           onChange={() => setConfirmedPaid(!confirmedPain)}
@@ -91,7 +91,7 @@ function CheckinBooking() {
             ` (${formatCurrency(totalPrice)} + ${formatCurrency(
               optionalPrice
             )})`}
-        </CheckBox>
+        </Checkbox>
       </Box>
 
       <ButtonGroup>
