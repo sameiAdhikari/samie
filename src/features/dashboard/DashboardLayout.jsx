@@ -25,7 +25,7 @@ function DashboardLayout() {
     <StyledDashboardLayout>
       <Stats
         bookings={bookings}
-        cabinCount={cabins.length}
+        cabinCount={cabins?.length}
         confirmStays={confirmStays}
         last={last}
       />
