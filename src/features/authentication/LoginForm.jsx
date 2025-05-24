@@ -27,6 +27,7 @@ function LoginForm() {
           value={email}
           placeholder="email address"
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
       </FormRowVertical>
       <FormRowVertical label="Password">
@@ -37,6 +38,7 @@ function LoginForm() {
           value={password}
           placeholder="password"
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
       </FormRowVertical>
       <FormRowVertical>

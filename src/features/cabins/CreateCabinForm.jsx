@@ -101,7 +101,7 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModel }) {
           {...register("discount", {
             required: "this field is required",
             validate: (value) =>
-              value < getValues().regularPrice ||
+              value < (getValues().regularPrice * 10) / 100 ||
               "discount should be less than regular price",
           })}
         />
